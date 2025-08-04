@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZChain Wallet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>EZChain Wallet</h1>
+            <div class="status-indicator" id="connectionStatus">
+                <span class="status-dot" id="statusDot"></span>
+                <span id="statusText">连接中...</span>
+            </div>
+        </header>
+
+        <main>
+            <!-- 账户信息区域 -->
+            <section class="account-info">
+                <h2>账户信息</h2>
+                <div class="info-card">
+                    <div class="info-item">
+                        <label>账户地址:</label>
+                        <div class="address-container">
+                            <span id="accountAddress">加载中...</span>
+                            <button class="copy-btn" id="copyAddress" title="复制地址">📋</button>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <label>账户余额:</label>
+                        <span id="accountBalance">加载中...</span>
+                    </div>
+                </div>
+                <div class="last-update">
+                    最后更新: <span id="lastUpdate">--</span>
+                </div>
+            </section>
+
+            <!-- 转账区域 -->
+            <section class="transfer-section">
+                <h2>转账</h2>
+                <form id="transferForm">
+                    <div class="form-group">
+                        <label for="recipientAddress">收款人地址 *</label>
+                        <input type="text" id="recipientAddress" name="recipientAddress" required 
+                               placeholder="输入收款人地址">
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">转账金额 *</label>
+                        <input type="number" id="amount" name="amount" required 
+                               placeholder="输入转账金额" step="0.00000001" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="fee">手续费 (可选)</label>
+                        <input type="number" id="fee" name="fee" 
+                               placeholder="输入手续费" step="0.00000001" min="0">
+                    </div>
+                    <button type="submit" class="transfer-btn" id="transferBtn">
+                        转账
+                    </button>
+                </form>
+            </section>
+
+            <!-- 状态消息区域 -->
+            <div class="message-container" id="messageContainer"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
