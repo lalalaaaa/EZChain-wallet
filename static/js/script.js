@@ -265,3 +265,90 @@ if ('performance' in window) {
         console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
     });
 }
+
+// Lightbox functionality for images
+document.addEventListener('DOMContentLoaded', function() {
+    // Create lightbox elements
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img class="lightbox-image" src="" alt="">
+            <div class="lightbox-caption"></div>
+        </div>
+    `;
+    document.body.appendChild(lightbox);
+
+    const lightboxImage = lightbox.querySelector('.lightbox-image');
+    const lightboxCaption = lightbox.querySelector('.lightbox-caption');
+    const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+    // Add click event to all images in figure cards and demo images
+    const clickableImages = document.querySelectorAll('.figure-image, .demo-image img, img[src*="figures"]');
+    
+    clickableImages.forEach(img => {
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', function() {
+            const src = this.src;
+            const alt = this.alt;
+            
+            // Get caption from parent card if available
+            let caption = alt;
+            const figureCard = this.closest('.figure-card');
+            if (figureCard) {
+                const captionElement = figureCard.querySelector('.figure-caption h4');
+                const descElement = figureCard.querySelector('.figure-caption p');
+                if (captionElement) {
+                    caption = captionElement.textContent;
+                    if (descElement) {
+                        caption += ' - ' + descElement.textContent;
+                    }
+                }
+            }
+            
+            lightboxImage.src = src;
+            lightboxCaption.textContent = caption;
+            lightbox.style.display = 'flex';
+            
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close lightbox when clicking close button or outside image
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+            closeLightbox();
+        }
+    });
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    // Add zoom functionality
+    let currentZoom = 1;
+    lightboxImage.addEventListener('click', function(e) {
+        e.stopPropagation();
+        currentZoom = currentZoom === 1 ? 2 : 1;
+        this.style.transform = `scale(${currentZoom})`;
+        this.style.transition = 'transform 0.3s ease';
+    });
+
+    // Reset zoom when closing
+    lightboxClose.addEventListener('click', function() {
+        currentZoom = 1;
+        lightboxImage.style.transform = 'scale(1)';
+        closeLightbox();
+    });
+});
