@@ -1,32 +1,67 @@
 # EZChain Website
 
-A modern, responsive website for EZChain - a revolutionary decentralized scale-out blockchain ledger system designed for Web3.0.
+## 🚀 About EZChain
 
-## 🌟 Features
+EZChain is a revolutionary decentralized scale-out blockchain ledger system designed for Web3.0. It represents a breakthrough in blockchain technology with:
 
 - **Linear Scalability**: System throughput scales proportionally with network size
 - **Hardware Efficient**: Designed for consumer-grade hardware
 - **Fast Confirmation**: Transaction confirmation within one minute
 - **Full Decentralization**: Maintains strict adherence to decentralization principles
-- **Interactive Demo**: Live blockchain demonstration
-- **Comprehensive Documentation**: Complete guides and API reference
 
-## 🚀 Quick Start
+## 🌐 This Website Project
 
-### Local Development
+This repository contains the official website for EZChain, built as a modern, responsive static website designed to introduce the project to the world. The website includes:
+
+- **Project Introduction**: Comprehensive overview of EZChain's vision and technology
+- **Interactive Demo**: Live blockchain demonstration and visualization
+- **Technical Documentation**: Complete guides, architecture details, and API reference
+- **Features Showcase**: Detailed explanations of EZChain's capabilities
+- **Research Information**: Links to academic papers and technical documentation
+
+## 🌍 Visit the Website
+
+**Live Website**: [https://lalalaaaa.github.io/EZChain-wallet/](https://lalalaaaa.github.io/EZChain-wallet/)
+
+You can explore the EZChain website directly through the link above. The site includes:
+
+- Homepage with project overview
+- Interactive blockchain demo
+- Technical architecture documentation
+- Feature comparisons and specifications
+- Research paper information
+
+## 🚀 How to Deploy This Website
+
+### Option 1: GitHub Pages (Recommended)
+
+1. **Fork this repository** to your GitHub account
+2. **Enable GitHub Pages** in repository settings:
+   - Go to Settings → Pages
+   - Source: Deploy from a branch
+   - Branch: main
+   - Folder: / (root)
+3. **Automatic deployment** will occur on every push to the main branch
+4. Your site will be available at: `https://yourusername.github.io/EZChain-wallet/`
+
+### Option 2: Local Development
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Re20Cboy/ezchain_website.git
-   cd ezchain_website
+   git clone https://github.com/lalalaaaa/EZChain-wallet.git
+   cd EZChain-wallet
    ```
 
 2. **Open in browser**
    Simply open `index.html` in your web browser to view the static website.
 
-### GitHub Pages Deployment
+### Option 3: Other Static Hosting
 
-This site is automatically deployed to GitHub Pages using GitHub Actions. The site will be available at: `https://Re20Cboy.github.io/ezchain_website`
+The website can be deployed to any static hosting service:
+- **Netlify**: Drag and drop the folder or connect GitHub repository
+- **Vercel**: Import the project from GitHub
+- **Firebase Hosting**: Use `firebase deploy` after setup
+- **Any web server**: Copy files to any web server's public directory
 
 ## 📁 Project Structure
 
@@ -136,7 +171,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🔗 Links
 
-- **Live Demo**: [https://Re20Cboy.github.io/ezchain_website](https://Re20Cboy.github.io/ezchain_website)
+- **Live Demo**: [https://lalalaaaa.github.io/EZChain-wallet/](https://lalalaaaa.github.io/EZChain-wallet/)
 - **Research Paper**: [arXiv:2312.00281](https://arxiv.org/abs/2312.00281)
 - **Source Code**: [github.com/Re20Cboy/Ezchain-py](https://github.com/Re20Cboy/Ezchain-py)
 
