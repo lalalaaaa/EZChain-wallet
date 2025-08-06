@@ -385,14 +385,14 @@ body {
 }
 
 .nav-link {
-    color: white;
+    color: white !important;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #ffd700;
+    color: #ffd700 !important;
 }
 
 .nav-toggle {
