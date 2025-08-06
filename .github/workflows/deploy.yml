@@ -30,9 +30,6 @@ jobs:
         source: ./
         destination: ./_site
         
-    - name: Copy _figures directory
-      run: cp -r _figures _site/_figures/
-        
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       
