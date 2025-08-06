@@ -1181,6 +1181,98 @@ body {
     background: white;
 }
 
+.demo-gallery {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.demo-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.demo-intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.demo-intro p {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.figures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.figure-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.figure-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.figure-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.figure-caption {
+    padding: 1.5rem;
+}
+
+.figure-caption h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.figure-caption p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.demo-info {
+    margin-bottom: 2rem;
+}
+
+.info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.info-card h3 {
+    color: #667eea;
+    margin-bottom: 1rem;
+}
+
+.info-card h3 i {
+    margin-right: 0.5rem;
+}
+
+.info-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
 .demo-intro {
     text-align: center;
     margin-bottom: 3rem;
