@@ -1,0 +1,73 @@
+name: EZChain Website
+description: A decentralized scale-out blockchain ledger system for Web3.0
+url: https://Re20Cboy.github.io/ezchain_website
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - app.py
+  - ezchain_api.py
+  - requirements.txt
+  - account_private_key/
+  - account_public_key/
+  - node_private_key/
+  - node_public_key/
+  - __pycache__/
+  - .git/
+  - .github/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+
+# Include specific files and directories
+include:
+  - _pages
+  - static/
+  - images/
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# SEO settings
+title: EZChain - Decentralized Scale-out Blockchain Ledger System
+author: EZChain Team
+lang: en
+locale: en_US
+
+# Social media
+twitter:
+  username: ezchain_dev
+  card: summary
+
+github:
+  username: Re20Cboy
+
+# Google Analytics
+google_analytics: UA-XXXXXXXXX-X
+
+# GitHub specific settings
+github:
+  repository_name: ezchain_website
+  repository_url: https://github.com/Re20Cboy/ezchain_website

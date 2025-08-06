@@ -1,112 +1,151 @@
-# EZChain Wallet
+# EZChain Website
 
-一个基于自研区块链后端的钱包Web客户端。
+A modern, responsive website for EZChain - a revolutionary decentralized scale-out blockchain ledger system designed for Web3.0.
 
-## 功能特性
+## 🌟 Features
 
-- ✅ 账户信息实时显示（地址、余额）
-- ✅ 转账功能（支持手续费设置）
-- ✅ 每2秒自动刷新余额
-- ✅ 响应式设计，支持移动端
-- ✅ 完整的错误处理和用户反馈
-- ✅ 一键复制地址功能
+- **Linear Scalability**: System throughput scales proportionally with network size
+- **Hardware Efficient**: Designed for consumer-grade hardware
+- **Fast Confirmation**: Transaction confirmation within one minute
+- **Full Decentralization**: Maintains strict adherence to decentralization principles
+- **Interactive Demo**: Live blockchain demonstration
+- **Comprehensive Documentation**: Complete guides and API reference
 
-## 快速开始
+## 🚀 Quick Start
 
-### 1. 安装依赖
+### Local Development
 
-```bash
-npm install
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Re20Cboy/ezchain_website.git
+   cd ezchain_website
+   ```
 
-### 2. 启动服务器
+2. **Open in browser**
+   Simply open `index.html` in your web browser to view the static website.
 
-```bash
-npm start
-```
+### GitHub Pages Deployment
 
-或使用开发模式（支持热重载）：
+This site is automatically deployed to GitHub Pages using GitHub Actions. The site will be available at: `https://Re20Cboy.github.io/ezchain_website`
 
-```bash
-npm run dev
-```
-
-### 3. 访问应用
-
-打开浏览器访问: http://localhost:3000
-
-## API接口
-
-### 获取账户信息
-```
-GET /api/balance
-```
-
-响应示例：
-```json
-{
-  "address": "ezc1testaddress1234567890abcdefghijklmnopqrstuvwxyz",
-  "balance": 1000.5
-}
-```
-
-### 执行转账
-```
-POST /api/transfer
-```
-
-请求参数：
-```json
-{
-  "recipientAddress": "ezc1recipientaddress...",
-  "amount": 10.5,
-  "fee": 0.01
-}
-```
-
-响应示例：
-```json
-{
-  "success": true,
-  "message": "转账成功",
-  "transactionId": "1234567890"
-}
-```
-
-## 文件结构
+## 📁 Project Structure
 
 ```
 ezchain_website/
-├── index.html          # 主页面
-├── styles.css          # 样式文件
-├── script.js           # 前端逻辑
-├── server.js           # 后端API服务器
-├── package.json        # 项目配置
-├── prd.md             # 产品需求文档
-└── README.md          # 说明文档
+├── index.html              # Homepage
+├── features.html           # Features page
+├── architecture.html       # Architecture documentation
+├── demo.html              # Interactive blockchain demo
+├── documentation.html     # Complete documentation
+├── about.html             # About the project
+├── static/
+│   ├── css/
+│   │   └── style.css      # Main stylesheet
+│   └── js/
+│       └── script.js      # JavaScript functionality
+├── _config.yml            # Jekyll configuration
+├── _layouts/
+│   └── default.html       # Default layout
+└── .github/workflows/
+    └── deploy.yml         # GitHub Pages deployment
 ```
 
-## 技术栈
+## 🎯 Pages Overview
 
-- **前端**: HTML5, CSS3, JavaScript (ES6+)
-- **后端**: Node.js, Express.js
-- **样式**: 响应式设计，CSS Grid & Flexbox
-- **特性**: 前后端分离，RESTful API
+### Homepage (`index.html`)
+- Project introduction and overview
+- Key highlights and statistics
+- Call-to-action buttons
 
-## 注意事项
+### Features (`features.html`)
+- Detailed feature explanations
+- Performance comparisons
+- Technical specifications
 
-1. 当前使用模拟数据进行演示
-2. 实际部署时需要配置真实的区块链后端API
-3. 建议在生产环境中添加HTTPS和身份验证
-4. 可根据实际需求调整自动刷新间隔
+### Architecture (`architecture.html`)
+- System architecture overview
+- Node types and roles
+- Consensus mechanism details
+- Data structures
 
-## 开发说明
+### Demo (`demo.html`)
+- Interactive blockchain simulation
+- Real-time statistics
+- Transaction creation
+- Block exploration
 
-- 前端代码采用ES6 Class语法组织
-- 支持现代浏览器（Chrome, Firefox, Safari, Edge）
-- 移动端适配良好
-- 包含完整的错误处理机制
+### Documentation (`documentation.html`)
+- Installation guide
+- API reference
+- Tutorials and examples
+- Troubleshooting
 
-## 许可证
+### About (`about.html`)
+- Research paper information
+- Team members
+- Project timeline
+- Contact information
 
-MIT License
+## 🔧 Customization
+
+### Styling
+The main stylesheet is located at `static/css/style.css`. You can customize:
+- Colors and gradients
+- Typography
+- Layout components
+- Responsive breakpoints
+
+### Content
+Edit the HTML files directly to modify content. Each page is self-contained with all necessary styles and scripts.
+
+### JavaScript
+Interactive features are implemented in `static/js/script.js` and inline scripts in demo pages.
+
+## 📱 Responsive Design
+
+The website is fully responsive and works on:
+- Desktop computers
+- Tablets
+- Mobile phones
+
+## 🚀 Deployment
+
+### GitHub Pages (Recommended)
+1. Fork this repository
+2. Enable GitHub Pages in repository settings
+3. The site will automatically deploy on push
+
+### Other Static Hosting
+The site can be deployed to any static hosting service:
+- Netlify
+- Vercel
+- Firebase Hosting
+- Any web server
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test locally
+5. Submit a pull request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🔗 Links
+
+- **Live Demo**: [https://Re20Cboy.github.io/ezchain_website](https://Re20Cboy.github.io/ezchain_website)
+- **Research Paper**: [arXiv:2312.00281](https://arxiv.org/abs/2312.00281)
+- **Source Code**: [github.com/Re20Cboy/Ezchain-py](https://github.com/Re20Cboy/Ezchain-py)
+
+## 📞 Contact
+
+For questions or collaboration opportunities:
+- GitHub: [@Re20Cboy](https://github.com/Re20Cboy)
+- Email: research@ezchain.dev
+
+---
+
+Built with ❤️ for the blockchain community

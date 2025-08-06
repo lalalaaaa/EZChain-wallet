@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture - Ezchain Blockchain</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Ezchain</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="features.html" class="nav-link">Features</a></li>
+                <li><a href="architecture.html" class="nav-link">Architecture</a></li>
+                <li><a href="demo.html" class="nav-link">Demo</a></li>
+                <li><a href="documentation.html" class="nav-link">Documentation</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>System Architecture</h1>
+                <p>Understanding the technical foundation of Ezchain's revolutionary blockchain design</p>
+            </div>
+        </div>
+
+        <section class="architecture-overview">
+            <div class="container">
+                <div class="architecture-content">
+                    <div class="architecture-text">
+                        <h2>Scale-Out Architecture</h2>
+                        <p>
+                            Ezchain introduces a novel scale-out architecture that breaks free from the limitations 
+                            of traditional blockchain systems. The core innovation lies in its ability to distribute 
+                            the workload across multiple specialized nodes, enabling linear scalability.
+                        </p>
+                        <div class="architecture-diagram">
+                            <div class="diagram-node">
+                                <i class="fas fa-cube"></i>
+                                <span>Block Layer</span>
+                            </div>
+                            <div class="diagram-node">
+                                <i class="fas fa-exchange-alt"></i>
+                                <span>Transaction Layer</span>
+                            </div>
+                            <div class="diagram-node">
+                                <i class="fas fa-network-wired"></i>
+                                <span>Network Layer</span>
+                            </div>
+                            <div class="diagram-node">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Consensus Layer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="node-types">
+            <div class="container">
+                <h2 class="section-title">Node Types and Roles</h2>
+                <div class="nodes-grid">
+                    <div class="node-card">
+                        <div class="node-icon">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h3>Mining Nodes</h3>
+                        <p>Responsible for creating new blocks through proof-of-work mining. These nodes compete to solve cryptographic puzzles and add new blocks to the chain.</p>
+                        <div class="node-specs">
+                            <h4>Specifications:</h4>
+                            <ul>
+                                <li>High CPU/GPU requirements</li>
+                                <li>Participate in consensus</li>
+                                <li>Earn block rewards</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="node-card">
+                        <div class="node-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Storage Nodes</h3>
+                        <p>Specialized nodes that store the complete blockchain history and provide data availability to the network.</p>
+                        <div class="node-specs">
+                            <h4>Specifications:</h4>
+                            <ul>
+                                <li>Large storage capacity</li>
+                                <li>Full blockchain storage</li>
+                                <li>Data retrieval services</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="node-card">
+                        <div class="node-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Validation Nodes</h3>
+                        <p>Nodes that verify transactions and blocks, ensuring the integrity of the blockchain without participating in mining.</p>
+                        <div class="node-specs">
+                            <h4>Specifications:</h4>
+                            <ul>
+                                <li>Moderate hardware requirements</li>
+                                <li>Transaction verification</li>
+                                <li>Block validation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="node-card">
+                        <div class="node-icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>Relay Nodes</h3>
+                        <p>Network nodes that facilitate communication between different parts of the network, optimizing data flow.</p>
+                        <div class="node-specs">
+                            <h4>Specifications:</h4>
+                            <ul>
+                                <li>High bandwidth</li>
+                                <li>Network optimization</li>
+                                <li>Message routing</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="node-card">
+                        <div class="node-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                        <h3>Light Client Nodes</h3>
+                        <p>Lightweight nodes that allow users to interact with the blockchain without storing the full chain.</p>
+                        <div class="node-specs">
+                            <h4>Specifications:</h4>
+                            <ul>
+                                <li>Minimal hardware requirements</li>
+                                <li>SPV verification</li>
+                                <li>Mobile-friendly</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="consensus-mechanism">
+            <div class="container">
+                <h2 class="section-title">Consensus Mechanism</h2>
+                <div class="consensus-content">
+                    <div class="consensus-item">
+                        <h3>Hybrid Consensus Algorithm</h3>
+                        <p>
+                            Ezchain employs a hybrid consensus mechanism that combines the best aspects of 
+                            Proof-of-Work (PoW) and Practical Byzantine Fault Tolerance (PBFT) to achieve 
+                            both security and scalability.
+                        </p>
+                        <div class="consensus-features">
+                            <div class="feature-point">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Fast Finality</h4>
+                                    <p>Transactions are confirmed within one minute through optimistic execution</p>
+                                </div>
+                            </div>
+                            <div class="feature-point">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Energy Efficient</h4>
+                                    <p>Optimized mining algorithm reduces energy consumption</p>
+                                </div>
+                            </div>
+                            <div class="feature-point">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <h4>Asynchronous Processing</h4>
+                                    <p>Parallel transaction processing enables higher throughput</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="data-structures">
+            <div class="container">
+                <h2 class="section-title">Key Data Structures</h2>
+                <div class="data-structures-grid">
+                    <div class="data-structure">
+                        <h3><i class="fas fa-cubes"></i> Block Structure</h3>
+                        <p>Each block contains transactions, a Merkle tree root, timestamp, nonce, and digital signature.</p>
+                        <div class="code-block">
+                            <pre><code>Block {
+    index: int
+    hash: str
+    pre_hash: str
+    miner: str
+    time: datetime
+    nonce: int
+    m_tree_root: str
+    bloom: list
+    signature: str
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="data-structure">
+                        <h3><i class="fas fa-exchange-alt"></i> Transaction Format</h3>
+                        <p>Transactions include sender, recipient, amount, nonce, signature, and timestamp.</p>
+                        <div class="code-block">
+                            <pre><code>Transaction {
+    sender: str
+    recipient: str
+    nonce: int
+    signature: str
+    value: Value
+    tx_hash: int
+    time: datetime
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="data-structure">
+                        <h3><i class="fas fa-tree"></i> Merkle Tree</h3>
+                        <p>Efficient data structure for verifying transaction inclusion in blocks.</p>
+                        <div class="code-block">
+                            <pre><code>MerkleTree {
+    root: str
+    leaves: list
+    levels: list
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="network-protocol">
+            <div class="container">
+                <h2 class="section-title">Network Protocol</h2>
+                <div class="protocol-content">
+                    <div class="protocol-diagram">
+                        <div class="protocol-layer">
+                            <h4>Application Layer</h4>
+                            <p>Wallet interfaces, DApps, and user interactions</p>
+                        </div>
+                        <div class="protocol-layer">
+                            <h4>Consensus Layer</h4>
+                            <p>Block validation, mining, and agreement protocols</p>
+                        </div>
+                        <div class="protocol-layer">
+                            <h4>Data Layer</h4>
+                            <p>Block and transaction propagation</p>
+                        </div>
+                        <div class="protocol-layer">
+                            <h4>Network Layer</h4>
+                            <p>P2P communication, node discovery, and message routing</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ezchain</h3>
+                    <p>A decentralized scale-out blockchain ledger system for Web3.0</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="architecture.html">Architecture</a></li>
+                        <li><a href="documentation.html">Documentation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://github.com/Re20Cboy/Ezchain-py" target="_blank">GitHub Repository</a></li>
+                        <li><a href="https://arxiv.org/abs/2312.00281" target="_blank">arXiv Paper</a></li>
+                        <li><a href="demo.html">Live Demo</a></li>
+                        <li><a href="documentation.html">API Documentation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ezchain. All rights reserved. | Open source project under MIT License</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/script.js"></script>
+</body>
+</html>
